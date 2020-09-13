@@ -30,6 +30,10 @@
     --background: #75DAAD;
 }
 
+.bgLight{
+    --background: #EDFFEA;
+}
+
 .title {
     
     margin-left: 23px;
@@ -52,3 +56,42 @@
     --box-shadow: none;
     width: 50%;
 }
+
+.headerTitle{
+    color: #216353;
+    font-size: 30px;
+    margin-top: 20px;
+    text-align: left;
+   
+}
+
+.height100{
+    height: 100px;
+    border-radius: 14px;
+    --box-shadow: none;
+
+}
+
+.backbtn{
+    color: #216353;
+}
+
+.searchBar{
+    border: 1px solid #216353;
+    --background: ;
+    color: #216353;
+    border-radius: 30px;
+    width: 90%;
+    height: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.pGreen{
+    color: #216353;
+}
+
+
+

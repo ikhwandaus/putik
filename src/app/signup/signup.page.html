@@ -2,7 +2,7 @@
   <p class="title" style="font-size: 40px;">Create an account</p>
 
   <ion-item class="input">
-    <ion-label>Full Name</ion-label>
+    <ion-label>User Name</ion-label>
     <ion-input></ion-input>
   </ion-item>
   <ion-item class="input">
@@ -22,17 +22,17 @@
 
   <ion-item class="input">
     <ion-label>Email</ion-label>
-    <ion-input></ion-input>
+    <ion-input type="text" [(ngModel)]="user.email" ></ion-input>
   </ion-item>
   <ion-item class="input">
     <ion-label>Password</ion-label>
-    <ion-input></ion-input>
+    <ion-input type="password" [(ngModel)]="user.password" ></ion-input>
   </ion-item>
   <ion-item class="input">
     <ion-label>Confirm Password</ion-label>
     <ion-input></ion-input>
   </ion-item>
 
-  <ion-button class="btn" expand="block">Signup</ion-button>
+  <ion-button class="btn" expand="block" (click)="signup(user)">Signup</ion-button>
   <br><a style="color: white;">Already have an account? <b>Login.</b></a>
 </ion-content>  

@@ -1,0 +1,51 @@
+.btnText{
+    font-size: 35px;
+    text-align: left;
+    // margin-top: 10px;
+    
+}
+.btnText2{
+    font-size: 35px;
+    text-align: right;
+}
+
+#darkGreen {
+    border: 1px solid #216353;
+    border-radius: 14px;
+    background-color: #216353;
+    height: 150px  
+}
+
+
+#lightGreen {
+    border: 1px solid  #75DAAD;
+    border-radius: 14px;
+    background-color: #75DAAD;
+    height: 150px
+}
+
+.hpBtn{
+    border-radius: 14px;
+    --box-shadow: none;
+    font-size: 20px;
+    --background: #216353;  
+
+}
+
+.darkGreenTxt{
+    color: #216353;
+}
+
+
+
+.hpIcon{
+    height: 130px;
+    display: inline-block;
+    margin: 1px;
+
+}
+.tn{
+    width: 100px;
+    margin-top: -100px;
+}
+

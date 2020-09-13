@@ -1,15 +1,22 @@
 <ion-content class="bg">
+
   <p class="title">Login</p>
   <p>Please login/sign-up to continue</p>
+
+  <!-- use email for now -->
   <ion-item class="input">
-    <ion-label position="floating">Username</ion-label>
-    <ion-input  type="number"></ion-input>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input  type="text" [(ngModel)]="user.email"></ion-input>
   </ion-item>
+
   <ion-item class="input">
     <ion-label position="floating">Password</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-input type="password"   [(ngModel)]="user.password"></ion-input>
   </ion-item>    
+
   <a style="margin-left: 60%; color:#216353;"><b>Forgot Password?</b></a><br>
-  <ion-button expand="block" shape="round" class="btn">Login</ion-button>
-  <a style="color:white;">Don't have an account? <b>Sign Up.</b></a>
+
+  <ion-button expand="block" shape="round" class="btn" (click)="login(user)">Login</ion-button>
+
+  <a style="color:white;">Don't have an account? <a style="color:white" href="/signup"><b>Sign Up.</b></a></a>
 </ion-content>

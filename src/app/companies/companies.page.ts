@@ -29,7 +29,7 @@ export class CompaniesPage implements OnInit {
   // displayNameRef: AngularFirestoreCollection<Name>;
   // afs: any;
 
-  constructor(private afs: AngularFirestore) { 
+  constructor(private afStore: AngularFirestore) { 
     // this.displayNameRef = this.afs.collection('displayName');
     // this.displayName = this.displayNameRef.valueChanges();
 
@@ -37,8 +37,8 @@ export class CompaniesPage implements OnInit {
    }
 
    ionViewWillEnter(){
-    this.itemsCollection = this.afs.collection('companies'); //ref
-    this.items = this.itemsCollection.valueChanges();
+    this.itemsCollection = this.afStore.collection('companies'); //ref
+    this.items = this.itemsCollection.valueChanges(); 
     console.log(this.items)
   }
 

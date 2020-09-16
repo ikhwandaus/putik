@@ -1,0 +1,50 @@
+#backbtn {
+    --background: none;
+    font-size: 24px;
+    color: #216353;
+}
+
+#card2 {
+    background-color: #75DAAD;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 27px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.titleU {
+    border-bottom: 1px solid #216353;
+    color: #216353;
+    font-size: 29px;
+    text-align: right;
+}
+
+#pswd {
+    font-size: 21px;
+    color: #FF7171;
+}
+
+.title{
+    color: #216353;
+}
+
+ion-toggle {
+    --background: #00968773;
+    --background-checked: #EDFFEA;
+    --handle-background: #009688;
+    --handle-background-checked: #87b19a;
+    height: 15px;
+}
+
+ion-card {
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    overflow-y: auto;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}

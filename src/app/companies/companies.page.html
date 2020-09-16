@@ -19,14 +19,14 @@
 <!-- <ion-item > -->
 
 
-<ion-card class="darkCard" *ngFor="let item of items | async">
+<ion-card class="darkCard" *ngFor="let item of items | async" routerLink="/cmpny-prof/{{item.id}}">
 
   <ion-card-header>
     <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
-    <ion-card-title>{{item.displayName}}</ion-card-title>
+    <ion-card-title class="cardTitle">{{item.displayName}}</ion-card-title>
   </ion-card-header>
 
-  <ion-card-content>
+  <ion-card-content class="font">
     {{item.address}}
   </ion-card-content>
 

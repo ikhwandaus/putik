@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import{ AngularFireAuth } from '@angular/fire/auth'
+import { AngularFireAuth } from '@angular/fire/auth';
 // import { rejects } from 'assert';
 // import { resolve } from 'dns';
 

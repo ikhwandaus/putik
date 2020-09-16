@@ -1,0 +1,67 @@
+<ion-content class="bg">
+
+  <ion-toolbar mode="md" class="bg">
+    <ion-buttons slot="start">
+      <ion-back-button class="backbtn" defaultHref="homepage"></ion-back-button>
+    </ion-buttons><br>
+  </ion-toolbar>
+  
+
+  <div style="text-align: center;">
+    <ion-icon name="person-circle-sharp" id="avatar"></ion-icon>
+    <p style="font-size: 30px; color: #EDFFEA;"><b>{{ (comp | async)?.displayName }}</b></p>
+    <div id="rateBox">
+      <ion-icon name="star" id="rate"></ion-icon>
+    </div>
+    <p class="darkFont">Rate</p>
+  </div>
+
+  <ion-card class="darkFont card">
+    <p style="font-size: 36px;">Details</p>
+    <p class="fontSize"><b>Address: </b>{{ (comp | async)?.address }}</p>
+    <p class="fontSize"><b>Contact: </b>{{ (comp | async)?.phoneNo }}</p>
+    <p class="fontSize"><b>Eligible Areas: </b>{{ (comp | async)?.eAreas }}</p>
+
+
+    <p style="font-size: 29px;">{{ (plan | async)?.descr }}</p>
+      <div style="display: flex;">  
+        <ion-card class="inline" style="background-color: #91D18B; color: black;">
+          <ion-grid>
+            <ion-row>
+              <ion-col><p>BND$</p></ion-col>
+              <ion-col><p>25</p></ion-col>
+              <ion-col>X24</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col><p>24 Months Residental Plan</p></ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+        <ion-card class="inline" style="background-color: #FF7171; color: black;">
+          <ion-grid>
+            <ion-row>
+              <ion-col><p>BND$</p></ion-col>
+              <ion-col><p>25</p></ion-col>
+              <ion-col>X24</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col><p>24 Months Residental Plan</p></ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+        <ion-card class="inline" style="background-color: #75DAAD; color: black;">
+          <ion-grid>
+            <ion-row>
+              <ion-col><p></p></ion-col>
+              <ion-col><p>25</p></ion-col>
+              <ion-col>X24</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col><p>24 Months Residental Plan</p></ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </div> 
+    <ion-button style="margin-left: auto; margin-right: auto;">see more plans...</ion-button>
+  </ion-card>
+</ion-content>

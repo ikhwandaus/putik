@@ -1,19 +1,46 @@
 .btnText{
-    font-size: 35px;
+    font-size: 55px;
     text-align: left;
     // margin-top: 10px;
     
 }
 .btnText2{
-    font-size: 35px;
+    font-size: 55px;
     text-align: right;
+}
+
+.loginBtn {
+    border: 1px solid #216353;
+    box-sizing: border-box;
+    border-radius: 14px;
+    color: #216353;
+    --background: ;
+    --box-shadow: none;
+    width: 30%;
 }
 
 #darkGreen {
     border: 1px solid #216353;
     border-radius: 14px;
     background-color: #216353;
-    height: 150px  
+    height: 300px  
+}
+
+.settings{
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    margin-left: 165px;
+    margin-top: 50px;
+   background-color: transparent;
+    
+    
+}
+
+.icons{
+    height: 40px;
+    width: 40px;
+    color: #216353;
 }
 
 
@@ -21,7 +48,7 @@
     border: 1px solid  #75DAAD;
     border-radius: 14px;
     background-color: #75DAAD;
-    height: 150px
+    height: 300px
 }
 
 .hpBtn{

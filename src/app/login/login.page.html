@@ -1,5 +1,12 @@
 <ion-content class="bg">
 
+  <ion-toolbar mode="md" class="bg">
+    <ion-buttons slot="start">
+      <ion-back-button class="backbtn" defaultHref="homepage"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+
   <p class="title">Login</p>
   <p>Please login/sign-up to continue</p>
 
@@ -16,7 +23,13 @@
 
   <a style="margin-left: 60%; color:#216353;"><b>Forgot Password?</b></a><br>
 
-  <ion-button expand="block" shape="round" class="btn" (click)="login(user)">Login</ion-button>
+  <ion-row>
+    <ion-button expand="block" shape="round" class="btn" (click)="login(user)">Login</ion-button>
+    <ion-button expand="block" shape="round" class="btn2" (click)="closeModal()">Cancel</ion-button>
+  </ion-row>
+  
 
   <a style="color:white;">Don't have an account? <a style="color:white" href="/signup"><b>Sign Up.</b></a></a>
+
+  
 </ion-content>

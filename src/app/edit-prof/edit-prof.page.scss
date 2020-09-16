@@ -1,0 +1,35 @@
+.outlineBtn {
+    border: 1px solid #216353;
+    box-sizing: border-box;
+    border-radius: 14px;
+    color: #216353;
+    --background: ;
+    width: 70%;
+    height: 35px;
+}
+
+.darkFont {
+    color: #216353;
+}
+
+#cancelBtn {
+    border: 1px solid #FF7171;
+    box-sizing: border-box;
+    border-radius: 14px;
+    width: 120px;
+    height: 38px;
+    font-size: 20px;
+    color: #FF7171;
+    --background: none;
+}
+
+#saveBtn {
+    border: 1px solid #216353;
+    box-sizing: border-box;
+    border-radius: 14px;
+    width: 120px;
+    height: 38px;
+    font-size: 20px;
+    color: #216353;
+    --background: none;
+}

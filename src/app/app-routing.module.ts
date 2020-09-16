@@ -39,6 +39,22 @@ const routes: Routes = [
     path: 'map',
     loadChildren: () => import('./map/map.module').then( m => m.MapPageModule)
   },
+  {
+    path: 'cmpny-prof/:id',
+    loadChildren: () => import('./cmpny-prof/cmpny-prof.module').then( m => m.CmpnyProfPageModule)
+  },
+  {
+    path: 'userprof',
+    loadChildren: () => import('./userprof/userprof.module').then( m => m.UserprofPageModule)
+  },
+  {
+    path: 'edit-prof',
+    loadChildren: () => import('./edit-prof/edit-prof.module').then( m => m.EditProfPageModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+  },
 
 ];
 

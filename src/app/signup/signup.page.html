@@ -1,7 +1,15 @@
 <ion-content class="bg">
+
+  <ion-toolbar mode="md" class="bg">
+    <ion-buttons slot="start">
+      <ion-back-button class="backbtn" defaultHref="homepage"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+
   <p class="title" style="font-size: 40px;">Create an account</p>
 
-  
+
 
   
   <ion-item class="input">
@@ -31,13 +39,13 @@
     <ion-label>Password</ion-label>
     <ion-input type="password" [(ngModel)]="value.password" ></ion-input>
   </ion-item>
-  <ion-item class="input">
+  <!-- <ion-item class="input">
     <ion-label>Confirm Password</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+    <ion-input></ion-input> -->
+  <!-- </ion-item> -->
 
 
 
   <ion-button class="btn" expand="block" (click)="signup(value)">Signup</ion-button>
-  <br><a style="color: white;">Already have an account? <b>Login.</b></a>
+  <br><a style="color: white;">Already have an account? <a lines="none" style="color:white" href="/login"><b>Login.</b></a></a>
 </ion-content>  

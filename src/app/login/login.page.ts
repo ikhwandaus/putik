@@ -13,6 +13,8 @@ import { AngularFireAuth } from 'angularfire2/auth'
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 
+import { ModalController } from '@ionic/angular';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -32,7 +34,8 @@ user = {} as User;
   constructor(
     private afAuth: AngularFireAuth,
     public toastController: ToastController,
-    private router: Router
+    private router: Router,
+    public modalController: ModalController
 
     // private navCtrl: NavController,
     // private authService: AuthenticationService,
@@ -51,6 +54,7 @@ user = {} as User;
       if((await result).additionalUserInfo){
         this.router.navigate(['/homepage']);
         this.successToast();
+        this.closeModal();
       }
     }
     catch(e){
@@ -73,6 +77,11 @@ user = {} as User;
       duration: 2000
     });
     toast.present();
+  }
+
+  closeModal()
+  {
+    this.modalController.dismiss();
   }
 
 

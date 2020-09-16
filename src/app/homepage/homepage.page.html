@@ -6,7 +6,11 @@
 
     <ion-toolbar class="bgLight height100">
 
-      <ion-title class="darkGreenTxt">homepage</ion-title>
+      <ion-title class="darkGreenTxt"></ion-title>
+
+      <ion-button slot="end" shape="round" class="loginBtn darkGreenTxt"  (click)="presentModal()">
+        login
+      </ion-button>
 
 
     </ion-toolbar>
@@ -39,31 +43,37 @@
   </div> -->
   
   <!-- <ion-list> -->
-    <ion-item color="#216353" id="darkGreen" href="/companies">
+    <ion-item lines="none" color="#216353" id="darkGreen" href="/companies">
       <p class="btnText">Waste Collection Companies</p>
     </ion-item>
 
-    <ion-item color="#75DAAD" id="lightGreen" href="/locations">
+    <ion-item lines="none" color="#75DAAD" id="lightGreen" href="/locations">
       <p class="btnText2">Dumpsite & Recycle Drop-Offs</p>
     </ion-item>
 
-    <ion-item color="#216353" id="darkGreen" href="/schedule">
+    <!-- <ion-item color="#216353" id="darkGreen" href="/schedule">
      
      
       <p class="btnText">Waste Collection Schedules </p>
 
-<!--      
+     
       <ion-thumbnail class="tn" slot="end">
         <img class="hpIcon" src="assets/calendar.png"/>
       </ion-thumbnail>
-       -->
       
-    </ion-item>
+      
+    </ion-item> -->
 
-    <ion-item color="#75DAAD" id="lightGreen">
+    <!-- <ion-item color="#75DAAD" id="lightGreen">
       <p class="btnText2">Live Chat Support System</p>
-    </ion-item>
+    </ion-item> -->
   <!-- </ion-list>   -->
+
+  <button ion-button class="settings" routerLink="/settings">
+    <ion-icon name="settings" class="icons"></ion-icon>
+  </button>
+
+ 
 
 
 </ion-content>

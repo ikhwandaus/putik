@@ -1,0 +1,216 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>admin-comp-profile</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-toolbar mode="md" class="bgLight">
+
+  <img class="hpIcon" src="assets/putikLogo.png" routerLink="/admin-home"/>
+ 
+  <!-- <button class="darkFont logoutText" (click)="logout()">LOG OUT</button> -->
+  <ion-button style="float: right;" class="logoutBtn" shape="round" mode="ios" class="logoutBtn" (click)="logout()">
+    Log Out
+  </ion-button>
+  <button class="darkFont headerText"></button>
+  <button class="darkFont headerText" routerLink="/homepage">BACK TO PUTIK</button>
+  <button class="darkFont headerText" routerLink="/admin-add-comp">ADD NEW COMPANY</button>
+  <button class="darkFont headerText" routerLink="/admin-home">HOMEPAGE </button>
+  
+  
+</ion-toolbar>
+
+
+
+<ion-content class="bgLight">
+
+  <!-- <button class="homeBtn" style="margin-left: 95%;" routerLink="/admin-home" >
+    <ion-icon class="icons" name="home"></ion-icon>
+   </button> -->
+
+<div >
+  <ion-icon style="color: #216353; float: right; margin-right: 20px;" *ngIf="!profilePic" name="person-circle-sharp" (click)="updateProfilePic()" id="avatar"></ion-icon>
+  <input type="file" #fileBtn style="float: right;" class="filebtn" (change)="uploadPic($event)" />
+  <ion-img class="profile-pic" *ngIf="profilePic" style="float: right; margin-right: 40px;" (click)="updateProfilePic()" src="https://ucarecdn.com/{{profilePic}}/"></ion-img>
+  <h1 class="darkFont margin20" style="font-size: 70px; font-weight: bold; float: left;">{{compName}}</h1>
+
+  
+
+</div>
+ 
+  
+
+
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+
+
+<div class="darkFont margin20" style="margin-top: 200px;">
+  <h1 class="darkFont" style="font-size: 40px; font-weight: bold; margin-top: 30px;">Edit Company Details</h1> 
+  <div>
+    <h1>Company Name</h1>
+  </div>
+  <ion-item class="inputB">
+    <!-- <ion-label position="floating">Company Name</ion-label> -->
+    <ion-input class="fontSize35" type="text" [(ngModel)]="compName" ></ion-input>
+  </ion-item>
+
+  <div>
+    <h1>Company Address</h1>
+  </div>
+  <ion-item  class="rateInput textArea">
+    <!-- <ion-label >Address</ion-label> -->
+    <ion-textarea lines="rows" rows="10" cols="20" class="divArea fontSize35" [(ngModel)]="compAddress"></ion-textarea>
+  </ion-item>
+
+  <div>
+    <h1>Contact Number</h1>
+  </div>
+  <ion-item class="inputB">
+    <!-- <ion-label position="floating">Contact Number</ion-label> -->
+    <ion-input class="fontSize35" type="text" [(ngModel)]="compNumber" ></ion-input>
+  </ion-item>
+
+  <div>
+    <h1>Eligible Areas</h1>
+  </div>
+  <ion-item class="inputB">
+    <!-- <ion-label position="floating">Eligible Areas</ion-label> -->
+    <ion-input class="fontSize35" type="text" [(ngModel)]="compAreas" ></ion-input>
+  </ion-item>
+
+  <div class="wrapper">
+    <ion-col><ion-button shape="round" mode="ios" id="saveBtn" (click)="editProfile(item)">Save</ion-button></ion-col>
+  </div>
+ 
+</div>
+
+
+
+<br>
+
+<h1 class="darkFont margin20" style="font-size: 40px; font-weight: bold;">Edit Subscription Plans</h1>
+
+<!-- <ion-slides [options]="sliderConfig">
+  <ion-slide *ngFor="let plans of plansAr"> -->
+    
+    <div class="margin20 darkFont">
+    
+      <!-- plan card from subcollections -->
+      <ion-card class="inline planCard" routerLink="/admin-edit-plans/{{compNameId}}/{{plan.id}}" style="background-color: #216353; color: black;" *ngFor="let plan of plans | async">
+        <ion-grid>
+          <ion-row>
+            <p class="fontCard">BND$</p>
+            <p class="priceCard">{{plan.price}}</p>
+            <!-- <ion-col>X24</ion-col> -->
+          </ion-row>
+        
+            <p class="descrCard">{{plan.descr}}</p>
+        </ion-grid>
+      </ion-card>
+
+      <!-- add plan card -->
+      <ion-card class="inline planCard" routerLink="/admin-add-plans/{{compNameId}}" style="background-color: transparent; color: black; border-color: #91D18B; border-width: 20px;">
+        <ion-grid>
+          <ion-row>
+            <p class="fontCard"></p>
+            <ion-icon class="addIcon" name="add"></ion-icon>
+            <p class="priceCard"></p>
+            <!-- <ion-col>X24</ion-col> -->
+          </ion-row>
+        
+            <p class="descrCard" style="text-align: center; color: #216353" >Add New Plans</p>
+        </ion-grid>
+      </ion-card>
+
+
+      
+      
+    </div>
+    
+
+    
+
+    <h1 class="darkFont margin20" style="font-size: 40px; font-weight: bold;">Company Review List</h1>
+    <p class="darkFont margin20" style="text-align: center;"> Click on the review card to remove the review</p>
+
+    <div class="darkFont margin20">
+
+      <ion-grid>
+        <ion-card class="lightCard inline" *ngFor="let item of items | async" (click)="selectReview(item)">
+
+          <ion-card-header>
+            <ion-grid>
+              <ion-row>
+                <ion-icon name="person-circle-sharp" class="profIcon"></ion-icon>
+                <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+                <ion-card-title class="cardUsername fontWhite" style="font-size: 35px;">{{item.userName}}</ion-card-title>
+              </ion-row>
+            </ion-grid>
+            
+          </ion-card-header>
+            
+          <ion-card-content class="font cardContent">
+            <h1 class="title" style="font-weight: bold;">{{item.title}}</h1>
+            {{item.review}}
+          </ion-card-content>
+        
+        </ion-card>
+      </ion-grid>
+      
+
+      
+
+    </div>
+
+    <h1 class="darkFont margin20" style="font-size: 40px; font-weight: bold;">Subscribers List</h1>
+    <p class="darkFont margin20" style="text-align: center;"> Click on the user to terminate their subscription</p>
+    <div>
+
+      <ion-list class="listTable" lines="none">
+        <ion-item class="items">
+
+          <ion-label style="text-align: left; font-weight: bold; ">email</ion-label>
+          <ion-label style="text-align: center; font-weight: bold;">username</ion-label>
+          <ion-label style="text-align: right; font-weight: bold;">Plan ID</ion-label>
+
+
+        </ion-item>
+      </ion-list>
+
+      <ion-list class="listTable">
+        <ion-item *ngFor="let subs of subscriber | async" class="items" (click)="terminateSub(subs)">
+
+          <ion-label style="text-align: left;">{{subs.email}}</ion-label>
+          <ion-label style="text-align: center;">{{subs.userName}}</ion-label>
+          <!-- <ion-button style="float: right;" class="logoutBtn" shape="round" mode="ios">
+            Terminate
+          </ion-button> -->
+          <ion-label style="text-align: right;">{{subs.planId}}</ion-label>
+
+        </ion-item>
+
+        <!-- <ion-item class="items">
+          <ion-label>Mega Man X</ion-label>
+        </ion-item>
+        <ion-item class="items">
+          <ion-label>The Legend of Zelda</ion-label>
+        </ion-item> -->
+      </ion-list>
+
+    </div>
+
+    <div class="wrapper margin20">
+      <ion-col><ion-button shape="round" mode="ios" id="deleteBtn" (click)="deleteCompany()">Delete Company</ion-button></ion-col>
+    </div>
+  
+
+  <!-- </ion-slide>
+</ion-slides> -->
+  
+</ion-content>

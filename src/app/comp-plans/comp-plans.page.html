@@ -1,0 +1,46 @@
+<ion-content  class="bgLight">
+
+
+<!-- <ion-header> -->
+  <ion-toolbar mode="md" class="headerRed">
+
+    <ion-buttons slot="start">
+      <ion-back-button class="backbtn" defaultHref="companies"></ion-back-button>
+    </ion-buttons><br>
+
+   
+  
+  </ion-toolbar>
+
+
+<!-- </ion-header> -->
+
+<!-- <div class="topDiv">
+  
+</div> -->
+<div class="topDiv">
+  
+  
+  <p class="fonts80">${{ planPrice }}</p>
+  <p class="fonts30"><b></b>{{ planDescr }}</p>
+</div>
+
+<!-- <ion-card class="darkFont card" style="text-align: center;"> -->
+
+ 
+  
+<div class="darkFont marginL">
+  <p style="font-size: 36px; font-weight: bolder;">Subscription Details</p>
+  <p style="font-size: 20px; text-align: left; font-weight: bold;" *ngFor="let plans of planDetails"><b></b>• {{ plans }}</p>
+  <!-- <li *ngFor="let item of items | async">{{ item.de }}</li> -->
+</div>
+
+<!-- PayPal Div -->
+<div class="margin30" id="paypal-button-container"></div>
+
+<p class="darkFont" style="text-align: center;" *ngIf="subscribed"> You are already subscribed to a plan </p>
+
+
+
+
+</ion-content>

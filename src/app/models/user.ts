@@ -6,4 +6,8 @@ export interface User {
     address: string;
     phoneNo: number;
     icNo: number;
+    plans: String;
+    isAdmin: boolean;
+    subscribeTo: string;
+    subscribed: boolean;
 }

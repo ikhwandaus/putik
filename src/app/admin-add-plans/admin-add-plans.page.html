@@ -1,0 +1,72 @@
+<ion-toolbar mode="md" class="bgLight">
+
+  <img class="hpIcon" src="assets/putikLogo.png" routerLink="/admin-home"/>
+ 
+  <!-- <button class="darkFont logoutText" (click)="logout()">LOG OUT</button> -->
+  <ion-button style="float: right;" class="logoutBtn" shape="round" mode="ios" class="logoutBtn" (click)="logout()">
+    Log Out
+  </ion-button>
+  <button class="darkFont headerText"></button>
+  <button class="darkFont headerText" routerLink="/homepage">BACK TO PUTIK</button>
+  <button class="darkFont headerText" routerLink="/admin-add-comp">ADD NEW COMPANY</button>
+  <button class="darkFont headerText" routerLink="/admin-home">HOMEPAGE </button>
+  
+  
+</ion-toolbar>
+
+
+
+<ion-content class="bgLight">
+
+  <h1 class="darkFont margin20" style="font-size: 40px; font-weight: bold;">Add Company Plan</h1>
+
+<div class="darkFont margin20">
+
+  <div>
+    <h1>Plan ID</h1>
+  </div>
+  <ion-item class="inputB">
+    <!-- <ion-label position="floating">Company Name</ion-label> -->
+    <ion-input placeholder="e.g. mbb" class="fontSize35" type="text" [(ngModel)]="planId" ></ion-input>
+  </ion-item>
+
+  <div>
+    <h1>Plan Details</h1>
+  </div>
+  <ion-item  class="rateInput textArea" >
+    
+    <!-- <ion-textarea lines="rows" rows="10" cols="20" class="divArea fontSize35" [(ngModel)]="planDetails"></ion-textarea> -->
+
+    <ion-label position="stacked"></ion-label>
+    <ion-input class="fontSize35" placeholder="subscription detail" [(ngModel)]="detailArr"></ion-input>
+    <ion-input class="fontSize35" placeholder="subscription detail" [(ngModel)]="detailArr2"></ion-input>
+    <ion-input class="fontSize35" placeholder="subscription detail" [(ngModel)]="detailArr3"></ion-input>
+    <ion-input class="fontSize35" placeholder="subscription detail" [(ngModel)]="detailArr4"></ion-input>
+    <ion-input class="fontSize35" placeholder="subscription detail" [(ngModel)]="detailArr5"></ion-input>
+  </ion-item>
+
+  <div>
+    <h1>Plan Description</h1>
+  </div>
+  <ion-item class="inputB">
+    <!-- <ion-label position="floating">Contact Number</ion-label> -->
+    <ion-input class="fontSize35" type="text" [(ngModel)]="planDescr" ></ion-input>
+  </ion-item>
+
+  <div>
+    <h1>Plan Rate</h1>
+  </div>
+  <ion-item class="inputB">
+    <!-- <ion-label position="floating">Eligible Areas</ion-label> -->
+    <ion-input class="fontSize35" type="Number" [(ngModel)]="planPrice" ng-list></ion-input>
+  </ion-item>
+
+  <div class="wrapper">
+    <ion-col><ion-button shape="round" mode="ios" id="saveBtn" (click)="addPlan()">Save</ion-button></ion-col>
+  </div>
+ 
+</div>
+
+
+  
+</ion-content>

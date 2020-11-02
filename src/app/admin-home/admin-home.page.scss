@@ -1,0 +1,65 @@
+#darkGreen {
+    border: 1px solid #216353;
+    border-radius: 20px;
+    background-color: #216353;
+    // margin: auto;
+    height: 90px; 
+    width:  75%;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.btnText{
+    font-size:  28px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    // display: block;
+    text-align: center;
+}
+
+.margin20{
+    margin: 60px;
+    // margin-left: 70px;
+    // margin-right: 70px;
+}
+
+.margin60{
+    margin: 60px;
+}
+
+.backBtn{
+    --background: #75DAAD;
+    width: 180px;
+    font-size: 25px;
+}
+
+.header{
+    --background: #216353;
+}
+
+.hpIcon{
+    height: 150px;
+    width: 150px;
+    // margin: 20px;
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -10px;
+}
+
+.centerDiv{
+    background-color: #75DAAD;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 30px;
+    height: 38%;
+    width: 25%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

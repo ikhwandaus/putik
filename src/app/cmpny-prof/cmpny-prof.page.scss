@@ -1,3 +1,55 @@
 .fontSize{
     font-size: 20px;
 }
+
+.planCard{
+    height: 300px;
+    width: 100%;
+    border-radius: 20px;
+    --box-shadow: 60px
+}
+
+// .divHeight{
+//     height: 40%;
+// }
+
+.priceCard{
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.descrCard{
+    font-size: 20px;
+    margin-top: 1px;
+    position: relative;
+}
+
+.fontCard{
+    font-size: 20px;
+    margin-top: 70px;
+}
+
+.outlineBtn {
+    // border: 1px solid #216353;
+    box-sizing: border-box;
+    border-radius: 14px;
+    color: #ffffff;
+    --background: #216353; ;
+    width: 70%;
+    height: 35px;
+    margin-bottom: 20px;
+}
+
+.centerAlg{
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 20px;
+}
+
+.profile-pic{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 100px;
+    width: 200px;
+}

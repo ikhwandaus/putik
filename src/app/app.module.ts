@@ -15,6 +15,11 @@ import { firebaseConfig } from './credentials';
 // import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireAuthModule } from 'angularfire2/auth'
 import { from } from 'rxjs';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { HttpClientModule } from '@angular/common/http';
 
 // import { AuthenticationService } from 'src/shared/authentication-service';
 // import { environment } from '../environments/environment';
@@ -28,14 +33,18 @@ import { from } from 'rxjs';
             AppRoutingModule,
             AngularFireModule.initializeApp(firebaseConfig), 
             AngularFirestoreModule,
-            AngularFireAuthModule
+            AngularFireAuthModule,
+            ReactiveFormsModule,
+            HttpClientModule,
+            ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
             // AngularFireAuth
             ],
   
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Geolocation
   ],
   bootstrap: [AppComponent]
 })

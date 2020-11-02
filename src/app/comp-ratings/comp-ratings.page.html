@@ -1,0 +1,39 @@
+<ion-content class="bgLight">
+
+
+<!-- <ion-header> -->
+  <ion-toolbar mode="md" class="bgLight height40">
+
+    <ion-buttons slot="start">
+      <ion-back-button class="backbtn" defaultHref="homepage"></ion-back-button>
+    </ion-buttons><br>
+    
+  </ion-toolbar>
+<!-- </ion-header> -->
+
+<p class="title">Reviews</p>
+
+
+
+<ion-card class="lightCard" *ngFor="let item of items | async">
+
+  <ion-card-header>
+    <ion-grid>
+      <ion-row>
+        <ion-icon name="person-circle-sharp" class="profIcon"></ion-icon>
+        <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+        <ion-card-title class="cardUsername fontWhite" style="font-size: 35px;">{{item.userName}}</ion-card-title>
+      </ion-row>
+    </ion-grid>
+    
+  </ion-card-header>
+    
+  <ion-card-content class="font cardContent">
+    <h1 style="font-weight: bold; margin-bottom: 1px; font-size: 30px;">{{item.title}}</h1>
+    {{item.review}}
+  </ion-card-content>
+
+</ion-card>
+
+
+</ion-content>

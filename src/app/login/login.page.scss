@@ -1,0 +1,43 @@
+.error-message {
+    color: var(--ion-color-danger);
+}
+
+.field{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.hpIcon{
+    height: 150px;
+    width: 150px;
+    // margin: 20px;
+    text-align: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -10px;
+}
+
+.loginTitle {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 75px;
+    // font-weight: ;
+    // font-family: ;
+    line-height: 84px;
+}
+.btnLogin {
+    border: 1px solid #216353;
+    box-sizing: border-box;
+    border-radius: 14px;
+    color: #216353;
+    --background: ;
+    --box-shadow: none;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}

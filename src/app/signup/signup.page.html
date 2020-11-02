@@ -11,34 +11,42 @@
 
 
 
+  <div style="margin-left: 20px; margin-right: 30px;">
+    <ion-item class="input">
+      <ion-label position="floating">User Name</ion-label>
+      <ion-input [(ngModel)]="value.userName"></ion-input>
+    </ion-item>
+    <ion-item class="input">
+      <ion-label position="floating">Address</ion-label>
+      <ion-input [(ngModel)]="value.address"></ion-input>
+    </ion-item>
+    <ion-item class="input">
+      <ion-label position="floating">Phone Number</ion-label>
+      <ion-input id="phoneField" type="number" [(ngModel)]="value.phoneNo"></ion-input>
+    </ion-item>
+    <ion-item class="input">
+      <ion-label position="floating">IC Number</ion-label>
+      <ion-input id="icField" type="number" placeholder="e.g. 00123123" [(ngModel)]="value.icNo"></ion-input>
+    </ion-item>
+  </div>
   
-  <ion-item class="input">
-    <ion-label>User Name</ion-label>
-    <ion-input [(ngModel)]="value.userName"></ion-input>
-  </ion-item>
-  <ion-item class="input">
-    <ion-label>Address</ion-label>
-    <ion-input [(ngModel)]="value.address"></ion-input>
-  </ion-item>
-  <ion-item class="input">
-    <ion-label>Phone Number</ion-label>
-    <ion-input [(ngModel)]="value.phoneNo"></ion-input>
-  </ion-item>
-  <ion-item class="input">
-    <ion-label>IC Number</ion-label>
-    <ion-input [(ngModel)]="value.icNo"></ion-input>
-  </ion-item>
 
   <br>
 
-  <ion-item class="input">
-    <ion-label>Email</ion-label>
-    <ion-input type="text" [(ngModel)]="value.email" ></ion-input>
-  </ion-item>
-  <ion-item class="input">
-    <ion-label>Password</ion-label>
-    <ion-input type="password" [(ngModel)]="value.password" ></ion-input>
-  </ion-item>
+  <div style="margin-left: 20px; margin-right: 30px;">
+
+    <ion-item class="input">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" [(ngModel)]="value.email" ></ion-input>
+    </ion-item>
+    <ion-item class="input">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="value.password" ></ion-input>
+    </ion-item>
+
+  </div>
+
+ 
   <!-- <ion-item class="input">
     <ion-label>Confirm Password</ion-label>
     <ion-input></ion-input> -->
@@ -46,6 +54,11 @@
 
 
 
-  <ion-button class="btn" expand="block" (click)="signup(value)">Signup</ion-button>
-  <br><a style="color: white;">Already have an account? <a lines="none" style="color:white" href="/login"><b>Login.</b></a></a>
+  <ion-button class="btn" style="margin-top: 30px; margin-left: auto; margin-right: auto; display: block;" expand="block" (click)="signup(value)">Signup</ion-button>
+  <br>
+  
+  <div style="margin-right: auto; margin-left: auto; display: block; text-align: center;">
+
+    <a style="color: white;" >Already have an account? <a style="color:white" (click)="goToLogin()"><b>Login.</b></a></a>
+  </div>
 </ion-content>  

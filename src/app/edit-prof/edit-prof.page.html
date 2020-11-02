@@ -3,32 +3,59 @@
   <div style="text-align: center;">
     <p style="font-size: 31px; font-weight: 300; color: #EDFFEA;">Edit Profile</p>
     <ion-icon name="person-circle-sharp" id="avatar"></ion-icon>
-    <p class="darkFont" style="font-size: 18px;"><b>Change Profile Photo</b></p>
+    <!-- <p class="darkFont" style="font-size: 18px;"><b>Change Profile Photo</b></p> -->
   </div>  
-  <div class="darkFont" style="font-size: 16px; padding-left: 50px; padding-right: 50px;">
-    <p style="border-bottom: 1px solid #216353;"><b>Full Name: </b>Hj Ali</p>  
-    <p style="border-bottom: 1px solid #216353;"><b>Username: </b>@Hj.Ali</p>  
-    <p style="border-bottom: 1px solid #216353;"><b>IC Number: </b> 00-123444</p>  
-    <p style="border-bottom: 1px solid #216353;"><b>Phone No: </b>+673 8868864</p>  
-    <p style="border-bottom: 1px solid #216353;"><b>Address: </b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt temporibus eveniet ipsam explicabo quidem minus voluptas quam maxime earum voluptate.</p>  
-  </div>
-
-  <p style="text-align: left; font-size: 20px; padding-left: 20px;" class="darkFont">Personal Information</p>  
   
-  <div class="darkFont" style="font-size: 16px; padding-left: 50px; padding-right: 50px;">  
-    <p style="border-bottom: 1px solid #216353;"><b>Email: </b>hj.ali@email.com</p>
-    <p style="border-bottom: 1px solid #216353;"><b>Phone Number: </b>+673 8868864</p>
+  <div class="darkFont" style="font-size: 16px; padding-left: 50px; padding-right: 50px;">
+
+    <!-- <p style="border-bottom: 1px solid #216353;"><b>Username: </b>@Hj.Ali</p>   -->
+    <ion-item class="input">
+      <ion-label position="floating">Username</ion-label>
+      <ion-input type="text" [(ngModel)]="userName" ></ion-input>
+    </ion-item>
+
+    <!-- <p style="border-bottom: 1px solid #216353;"><b>IC Number: </b> 00-123444</p>   -->
+    <ion-item class="input">
+      <ion-label position="floating">IC Number</ion-label>
+      <ion-input id="icField" type="number" [(ngModel)]="icNo"></ion-input>
+    </ion-item>
+
+    <!-- <p style="border-bottom: 1px solid #216353;"><b>Phone No: </b>+673 8868864</p> -->
+    <ion-item class="input">
+      <ion-label position="floating">Phone No</ion-label>
+      <ion-input id="phoneField" type="number"[(ngModel)]="phoneNo"></ion-input>
+    </ion-item>
+
+    <!-- <p style="border-bottom: 1px solid #216353;"><b>Address: </b>Lorem ipsum </p> -->
+    <ion-item class="input">
+      <ion-label position="floating">Address</ion-label>
+      <ion-textarea rows="6" type="text" [(ngModel)]="address"></ion-textarea>
+    </ion-item>  
+
   </div>
 
-  <!-- <div style="display: flex;">
-    <ion-button id="cancelBtn">Cancel</ion-button>
-    <ion-button id="saveBtn">Save</ion-button>
-  </div> -->
+  <p style="text-align: left; font-size: 20px; padding-left: 20px;" class="darkFont">Change Password</p>  
+  
+  <div class="darkFont" style="font-size: 16px; padding-left: 50px; padding-right: 50px;"> 
+
+
+    <!-- <p style="border-bottom: 1px solid #216353;"><b>Password: </b>+673 8868864</p> -->
+    <ion-item class="input">
+      <ion-label position="floating">Old Password</ion-label>
+      <ion-input [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <ion-item class="input">
+      <ion-label position="floating">New Password</ion-label>
+      <ion-input id="newPassField" [(ngModel)]="newpassword"></ion-input>
+    </ion-item>
+  </div>
+
 
   <ion-grid style="text-align: center;">
     <ion-row>
-      <ion-col><ion-button id="cancelBtn">Cancel</ion-button></ion-col>
-      <ion-col><ion-button id="saveBtn">Save</ion-button></ion-col>
+      <ion-col><ion-button shape="round" mode="ios" id="cancelBtn" (click)="cancel()">Cancel</ion-button></ion-col>
+      <ion-col><ion-button shape="round" mode="ios" id="saveBtn" (click)="editProfile(item)">Save</ion-button></ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>

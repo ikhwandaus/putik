@@ -1,20 +1,39 @@
 <ion-content class="bg">
-  <ion-button id="backbtn"><ion-icon name="arrow-back-sharp"></ion-icon></ion-button><br>
+
+  <ion-toolbar mode="md" class="bg">
+   
+    <!-- back button -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="homepage" routerLink="/homepage"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+  
   <div style="text-align: center;">
-    <ion-icon name="person-circle-sharp" id="avatar"></ion-icon>
-    <p style="font-size: 28px; color: #EDFFEA;"><b>Hj Ali</b></p>
-    <p>Hj.ali@email.com</p>
+    <ion-icon style="color: #ffffff;" name="person-circle-sharp" id="avatar"></ion-icon>
+    <p style="font-size: 35px; color: #EDFFEA;"><b>{{username}}</b></p>
+    <p class="fontWhite" style="font-size: 20px;">{{userEmail}}</p>
   </div>
 
-  <ion-card class="darkFont card" style="text-align: center;">
-    <p><b>Username: </b>@Hj.Ali</p>
-    <p><b>IC Number: </b> 00-123444</p>
-    <p><b>Phone No: </b>+673 8868864</p>
-    <p><b>Address: </b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt temporibus eveniet ipsam explicabo quidem minus voluptas quam maxime earum voluptate.</p>
-    <ion-button class="outlineBtn">Edit Profile</ion-button>
+  <ion-card class="darkFont card" style="text-align: center; margin-bottom: 1px;">
+    <div class="contentFont">
+      <p><b>Username: </b>{{username}}</p>
+      <p><b>IC Number: </b>{{icNumber}}</p>
+      <p><b>Phone No: </b>{{phoneNumber}}</p>
+      <p><b>Address: </b>{{userAddress}}</p>
+    </div>
+    
+    <ion-button shape="round" mode="ios" class="outlineBtn" routerLink="/edit-prof">Edit Profile</ion-button>
+    
+    <p style="font-size: 26px; text-align: left;">Subscription Plan Details</p>
 
-    <ion-grid style="text-align: left;">
-      <ion-row>
+    <p *ngIf="!subscribed" style="margin-bottom: 10px;">You are not subscribed to any plan</p>
+
+  <div *ngIf="subscribed" style="margin-top: -60px;" >
+
+    
+    <ion-grid style="text-align: left;" >
+      <!-- <ion-row>
         <ion-col style="font-size: 26px;">Paypal Details</ion-col>
       </ion-row>
       <ion-row>
@@ -27,32 +46,40 @@
           <p>Password: ********</p>
         </ion-col>
         <ion-col><ion-button class="blueBtn" style="font-size: 14px;">Change</ion-button></ion-col>
-      </ion-row>
-      <ion-row></ion-row>
-      <ion-row>
-        <ion-col style="font-size: 26px;">Subscription Details</ion-col>
-      </ion-row>
+      </ion-row> -->
+    
+      <ion-row style="margin-top: 40px;"></ion-row>
       <ion-row>
         <ion-col>
-          <div class="redBox">
+
+          <ion-card  class="redBox" style="position: relative; margin-left: -5px;">
             <ion-grid>
               <ion-row>
-                <ion-col style="font-size: 11px;"><b>BND$</b></ion-col>
-                <ion-col style="font-size: 31px;"><b>25</b></ion-col>
-                <ion-col style="font-size: 12px;">x24</ion-col>
+                <ion-col style="font-size: 11px; margin-top:40px"><b>BND$</b></ion-col>
+                <ion-col style="font-size: 55px; margin-top:30px ;"><b>{{ planPrice }}</b></ion-col>
+                <ion-col></ion-col>
               </ion-row>
               <ion-row>
-                <ion-col style="font-size: 11px;">24 Months Residental Plan</ion-col>
+                <ion-col style="font-size: 15px; margin-top: 30px; text-align: center;">{{ planDescr }}</ion-col>
               </ion-row>
             </ion-grid>
-          </div>
+          </ion-card>
+
         </ion-col>
         <ion-col>
           <p style="font-size: 12px;">You have subscription plans with:</p>
-          <p style="font-size: 18px;"><b>RKS Syed Mohammed Enterprise</b></p>
-          <p style="font-size: 18px;">BND$ 25 x 24 months</p>
+          <p style="font-size: 18px;"><b>{{ compName }}</b></p>
+          <p style="font-size: 18px;">{{ planDescr }}</p>
         </ion-col>
       </ion-row>
+
+      
     </ion-grid>
+    <ion-button shape="round" mode="ios" class="cancelSubBtn" (click)="cancelSub()">Cancel Subscription</ion-button>
+  </div>
+ 
+
+    
   </ion-card>
+  <!-- <ion-button shape="round" mode="ios" class="logoutBtn" (click)="logOut()">Log Out</ion-button> -->
 </ion-content>

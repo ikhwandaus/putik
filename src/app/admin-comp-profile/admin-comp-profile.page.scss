@@ -1,0 +1,195 @@
+.fontSize35{
+    font-size: 35px;
+}
+.margin20{
+    margin: 60px;
+}
+
+.planCard{
+    height: 200px;
+    width: 250px;
+    border-radius: 20px;
+}
+
+.priceCard{
+    font-size: 65px;
+    font-weight: bold;
+    margin-bottom: -10px;
+    margin-top: 15px;
+    text-align: right;
+   margin-left: 20px;
+}
+
+.descrCard{
+    font-size: 20px;
+    margin: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.fontCard{
+    font-size: 20px;
+    margin: 5px;
+    margin-top: 20px;
+    // margin-left: 20px;
+}
+
+.lightCard{
+    background-color: #75DAAD;
+    border-radius: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+    width: 40%;
+    
+}
+
+.profIcon{
+    height: 70px;
+    width: 70px;
+    color: white;
+}
+
+.cardUsername{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.title{
+    font-size: 35px;
+    color: #ffffff;
+
+}
+
+.cardContent{
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.inputB {
+    --background: #EDFFEA;
+    --color: #216353;
+}
+.textArea {
+    --background: #EDFFEA;
+    --color: #216353;
+    border-color: #216353;
+}
+
+#saveBtn{
+    // position: absolute;
+    top: 50%;
+    margin-top: 5%;
+    width: 100%;
+    font-size: 25px;
+    --background: #75DAAD;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.newCard{
+    height: 200px;
+    width: 15%;
+    border-radius: 20px;
+}
+
+.addIcon{
+    height: 50px;
+    width: 50px;
+    color: #91D18B;
+}
+
+#deleteBtn{
+    // position: absolute;
+    top: 50%;
+    margin-top: 5%;
+    width: 100%;
+    font-size: 25px;
+    --background: #FF7171;
+}
+
+.icons{
+    height: 60px;
+    width: 60px;
+    color: #216353;
+}
+
+.homeBtn{
+    background-color: transparent;
+
+}
+
+.hpIcon{
+    height: 70px;
+    width: 70px;
+    // margin: 20px;
+    align-content: center;
+    display: block;
+    margin-left:20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    float: left;
+}
+
+.headerText{
+    float: right;
+    margin: 20px;
+    margin-top: 30px;
+    font-weight: bold;
+    background-color: transparent;
+    font-size: 15px;
+}
+
+.headerText:hover{
+    color: #75DAAD 
+}
+
+.logoutText{
+    float: right;
+    margin: 20px;
+    margin-top: 30px;
+    font-weight: bold;
+    background-color: transparent;
+    font-size: 15px;
+}
+
+.logoutText:hover{
+    color: #FF7171; 
+}
+
+.filebtn {
+	opacity: 0;
+	position: absolute;
+	top: -100em;
+	left: -100em;
+}
+
+.profile-pic{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 100px;
+    width: 200px;
+}
+
+.logoutBtn{
+    color: #ffffff;
+    --background:#FF7171 ;
+    // height: 60px;
+    margin-top: 10px;
+}
+
+.listTable{
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block;
+    width: 80%;
+    background-color: #EDFFEA;
+}
+.items{
+    // background-color: #EDFFEA;
+    --background:  #EDFFEA;
+    color: #216353;
+    font-size: 25px;
+}

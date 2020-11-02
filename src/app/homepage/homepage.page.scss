@@ -1,12 +1,19 @@
 .btnText{
-    font-size: 55px;
+    font-size: 210%;
     text-align: left;
     // margin-top: 10px;
     
 }
 .btnText2{
-    font-size: 55px;
-    text-align: right;
+    font-size: 210%;
+    text-align: left;
+    margin-left: 30px;  
+}
+
+.btnText3{
+    font-size: 210%;
+    text-align: center;
+    // margin-left: 30px;  
 }
 
 .loginBtn {
@@ -19,12 +26,58 @@
     width: 30%;
 }
 
+.logoutBtn {
+    // border: 1px solid #FF7171;
+    // box-sizing: border-box;
+    display: block;
+    margin-top: 30px;;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 14px;
+    color: #ffffff;
+    --background:#FF7171 ;
+    
+}
+.logInBtn {
+    // border: 1px solid #FF7171;
+    // box-sizing: border-box;
+    display: block;
+    margin-top: 30px;;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 14px;
+    color: #ffffff;
+    --background:#75DAAD ;
+    
+}
+
 #darkGreen {
     border: 1px solid #216353;
-    border-radius: 14px;
+    border-radius: 35px;
     background-color: #216353;
-    height: 300px  
+    margin-bottom: 20px;
+    height: 180px;  
 }
+
+#adminBtn{
+    border: 1px solid #216353;
+    border-radius: 35px;
+    background-color: #216353;
+    margin-top: 20px;
+    height: 100px; 
+}
+
+#lightGreen {
+    border: 1px solid  #75DAAD;
+    border-radius: 35px;
+    background-color: #75DAAD;
+    height: 180px
+}
+
 
 .settings{
     text-align: center;
@@ -38,18 +91,12 @@
 }
 
 .icons{
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
     color: #216353;
 }
 
 
-#lightGreen {
-    border: 1px solid  #75DAAD;
-    border-radius: 14px;
-    background-color: #75DAAD;
-    height: 300px
-}
 
 .hpBtn{
     border-radius: 14px;
@@ -64,15 +111,64 @@
 }
 
 
-
 .hpIcon{
     height: 130px;
-    display: inline-block;
-    margin: 1px;
-
+    // display: inline-block;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
 }
+
+.hpIcon2{
+    height: 130px;
+    // display: inline-block;
+    float: right;
+}
+
 .tn{
     width: 100px;
     margin-top: -100px;
 }
 
+.profBtn{
+    // margin-right: 20%;
+    // margin-top: -100%;
+    // margin-left: 60%;
+    margin-bottom: 40%;
+    
+    background-color: transparent;
+}
+
+.userFont{
+    font-size: 50px;
+    font-weight: lighter;
+    // margin-bottom: 90px;
+    margin-top: -15%;
+    margin-left: 2%;
+
+}
+
+.margin60{
+    margin: 25px;
+}
+
+.margin10{
+    margin: 10px;
+}
+
+.marginBtn{
+    margin-left: 15px;
+    margin-bottom: 15px;
+    --background: #75DAAD;
+}
+
+.putikIcon{
+    height: 50px;
+    width: 50px;
+    // margin: 20px;
+    text-align: left;
+    // display: block;
+    // margin-left: auto;
+    // margin-right: auto;
+  
+}

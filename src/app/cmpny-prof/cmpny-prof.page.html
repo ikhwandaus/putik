@@ -2,16 +2,18 @@
 
   <ion-toolbar mode="md" class="bg">
     <ion-buttons slot="start">
-      <ion-back-button class="backbtn" defaultHref="homepage"></ion-back-button>
+      <ion-back-button class="backbtn" defaultHref="companies"></ion-back-button>
     </ion-buttons><br>
   </ion-toolbar>
   
 
   <div style="text-align: center;">
-    <ion-icon name="person-circle-sharp" id="avatar"></ion-icon>
-    <p style="font-size: 30px; color: #EDFFEA;"><b>{{ (comp | async)?.displayName }}</b></p>
+    <ion-icon style="color: white;" *ngIf="!profilePic" name="person-circle-sharp" id="avatar"></ion-icon>
+    <ion-img class="profile-pic" *ngIf="profilePic" (click)="updateProfilePic()" src="https://ucarecdn.com/{{profilePic}}/"></ion-img>
+    
+    <p style="font-size: 30px; color: #EDFFEA; margin-right: 15px; margin-left: 15px;"><b>{{ (comp | async)?.displayName }}</b></p>
     <div id="rateBox">
-      <ion-icon name="star" id="rate"></ion-icon>
+      <ion-icon name="star" id="rate" routerLink="/rate/{{compNameId}}"></ion-icon>
     </div>
     <p class="darkFont">Rate</p>
   </div>
@@ -23,45 +25,47 @@
     <p class="fontSize"><b>Eligible Areas: </b>{{ (comp | async)?.eAreas }}</p>
 
 
-    <p style="font-size: 29px;">{{ (plan | async)?.descr }}</p>
-      <div style="display: flex;">  
-        <ion-card class="inline" style="background-color: #91D18B; color: black;">
-          <ion-grid>
-            <ion-row>
-              <ion-col><p>BND$</p></ion-col>
-              <ion-col><p>25</p></ion-col>
-              <ion-col>X24</ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col><p>24 Months Residental Plan</p></ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card>
-        <ion-card class="inline" style="background-color: #FF7171; color: black;">
-          <ion-grid>
-            <ion-row>
-              <ion-col><p>BND$</p></ion-col>
-              <ion-col><p>25</p></ion-col>
-              <ion-col>X24</ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col><p>24 Months Residental Plan</p></ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card>
-        <ion-card class="inline" style="background-color: #75DAAD; color: black;">
-          <ion-grid>
-            <ion-row>
-              <ion-col><p></p></ion-col>
-              <ion-col><p>25</p></ion-col>
-              <ion-col>X24</ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col><p>24 Months Residental Plan</p></ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card>
+    <!-- <p style="font-size: 29px;">{{ (plan | async)?.descr }}</p> -->
+
+    <p style="font-size: 36px;">Subscription Plans</p>
+    <!-- <p style="font-size: 36px;">{{ plansAr }}</p> -->
+
+    <!-- <ion-card class="darkCard"  *ngFor="let planz of plansAr" >
+      <ion-card-content class="font">
+        {{ planz }}
+      </ion-card-content>
+    </ion-card>
+     -->
+      <div class="divHeight" >  
+       
+
+       <ion-slides [options]="sliderConfig" style="margin-bottom: 30px;">
+         <ion-slide *ngFor="let plan of plans | async">
+ 
+          <ion-card class="inline planCard" style="background-color: #91D18B; color: black; " routerLink="/comp-plans/{{compNameId}}/{{plan.id}}">
+            <ion-grid>
+              <ion-row>
+                <p class="fontCard">BND$</p>
+                <ion-col><p class="priceCard">{{ plan.price }}</p></ion-col>
+                <!-- <ion-col>X24</ion-col> -->
+              </ion-row>
+              <ion-row>
+                <ion-col><p class="descrCard">{{ plan.descr }}</p></ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card>
+
+         </ion-slide>
+       </ion-slides>
+
       </div> 
-    <ion-button style="margin-left: auto; margin-right: auto;">see more plans...</ion-button>
+
+    <!-- <ion-button style="margin-left: auto; margin-right: auto;">see more plans...</ion-button> -->
+
+    <!-- <p style="font-size: 36px;">Customer Reviews</p> -->
+    
+
   </ion-card>
+
+  <ion-button shape="round" mode="ios" class="outlineBtn centerAlg" routerLink="/comp-ratings/{{compNameId}}">See Reviews</ion-button>
 </ion-content>

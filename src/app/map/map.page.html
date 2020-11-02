@@ -1,18 +1,86 @@
-<ion-content>
+
 
 <!-- <ion-header class="bgLight"> -->
-  <ion-toolbar mode="md" class="bg height100">
+  <ion-toolbar mode="md" class="bg">
     <ion-title class="mapHeader">Map</ion-title>
 
     <!-- back button -->
     <ion-buttons slot="start">
-      <ion-back-button class="mapBackbtn" defaultHref="homepage"></ion-back-button>
+      <ion-back-button defaultHref="homepage"></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
 
   </ion-toolbar>
 <!-- </ion-header> -->
 
+<ion-content class="bg" id="content">
+
+<ion-menu side="end" contentId="content">
+  <!-- <ion-header>
+    <ion-toolbar class="bg">
+      <ion-title>Locations</ion-title>
+    </ion-toolbar>
+  </ion-header > -->
+  <ion-content class="bgLight">
+    <p class="darkFont" style="font-size: 30px; margin: 10px;">Locations</p>
+    <!-- <ion-list class="bgLight">  -->
+      <ion-item class="bgLight darkFont">
+        <ion-button style="--background: ; --box-shadow: none; font-size: 20px; font-weight: lighter;" mode="ios" class="darkFont" (click)="showDumpsites()">
+          Dumpsites
+        </ion-button>
+      </ion-item>
+
+      <ion-item class="bgLight darkFont">
+        <ion-button style="--background: ; --box-shadow: none; font-size: 20px; font-weight: lighter;" mode="ios" class="darkFont" (click)="showDropoff()">
+          Recycle Drop-Off
+        </ion-button>
+      </ion-item>
+
+      <!-- <ion-item class="bgLight darkFont">
+        <ion-button style="--background: ; --box-shadow: none; font-size: 20px; font-weight: lighter;" mode="ios" class="darkFont" (click)="showDumpsites()">
+         Waste Collection Companies
+        </ion-button>
+      </ion-item> -->
+      
+      <br>
+      <p class="darkFont" style="font-size: 30px; margin: 10px;">Nearby Location</p>
+      <!-- <p class="darkFont">{{nearest}}</p> -->
+      <ion-card class="sideCard" *ngIf="nearest">
+
+        <ion-card-header>
+          <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+          <ion-card-title class="cardTitle font">{{nearest}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content class="font">
+          {{nearAddr}}
+        </ion-card-content>
+      
+      </ion-card>
+      <!-- <p class="darkFont">{{phone}}</p> -->
+
+    <!-- </ion-list > -->
+  </ion-content>
+</ion-menu>
 
   <div #map id="map"></div>
 
+  <div style="height: 20%; z-index: 5; background-color: #75DAAD;">
+
+    <div style="margin: 20px; color: white;">
+      <p style="font-size: 30px; margin-right: 20px;">{{conts}}</p>
+      <p style="margin-top: 1px; font-size: 20px; margin-top: -30px; font-weight: 450;">{{distance}}</p>
+      <p style="margin-top: -20px;">{{address}}</p>
+      <p style="margin-top: -1px; font-size: 18px;">{{phone}}</p>
+      <p style="margin-top: -20px;font-size: 18px;">{{email}}</p>
+      <p style="margin-top: -20px;font-size: 18px;">{{hours}}</p>
+
+
+    </div>
+  </div>
+
 </ion-content>
+

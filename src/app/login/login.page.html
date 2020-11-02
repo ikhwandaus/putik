@@ -1,35 +1,53 @@
 <ion-content class="bg">
 
   <ion-toolbar mode="md" class="bg">
-    <ion-buttons slot="start">
-      <ion-back-button class="backbtn" defaultHref="homepage"></ion-back-button>
-    </ion-buttons>
 
   </ion-toolbar>
 
-  <p class="title">Login</p>
-  <p>Please login/sign-up to continue</p>
+  <img class="hpIcon" src="assets/putikLogo.png"/>
 
+  <p class="loginTitle fontWhite">Login.</p>
+  <br>
+  <p class="fontWhite" style="margin-left: auto; margin-right: auto; margin-top: -20px; text-align: center; font-size: 20px;">Please login/sign-up to continue</p>
+
+  <form  [formGroup]="loginForm" >
+
+  
   <!-- use email for now -->
-  <ion-item class="input">
+  <ion-item class="input field">
     <ion-label position="floating">Email</ion-label>
-    <ion-input  type="text" [(ngModel)]="user.email"></ion-input>
+    <ion-input  type="text" inputmode="email" formControlName="email" [(ngModel)]="user.email"></ion-input>
   </ion-item>
 
-  <ion-item class="input">
-    <ion-label position="floating">Password</ion-label>
-    <ion-input type="password"   [(ngModel)]="user.password"></ion-input>
-  </ion-item>    
+  <div *ngFor="let error of errorMessages.email">
+    <ng-container *ngIf="loginForm.controls['email'].errors?.required && loginForm.controls['email'].touched && loginForm.controls['email'].dirty">
+      <small style="margin-left: 20px;" class="error-message">{{error.message}}</small>
+    </ng-container>
+  </div>
 
-  <a style="margin-left: 60%; color:#216353;"><b>Forgot Password?</b></a><br>
+  <ion-item class="input field">
+    <ion-label position="floating">Password</ion-label>
+    <ion-input id="passField" type="password" formControlName="password" [(ngModel)]="user.password"></ion-input>
+  </ion-item> 
+
+  
+  </form>
+
+  <br>
+  <a style="color:white; margin-left: 20px; margin-right: auto; text-align: center; align-content: center;">Don't have an account? <a style="color:white;" (click)="goToSignUp()"><b>Sign Up.</b></a></a>
+  <br>
+  <a style="margin-left: 20px; color:#216353;" (click)="resetPassword(user)"><b>Forgot Password?</b></a><br>
 
   <ion-row>
-    <ion-button expand="block" shape="round" class="btn" (click)="login(user)">Login</ion-button>
-    <ion-button expand="block" shape="round" class="btn2" (click)="closeModal()">Cancel</ion-button>
+    <ion-button expand="block" shape="round" class="btnLogin" (click)="login(user)">Login</ion-button>
+    
+    <!-- <ion-button expand="block" shape="round" class="btn2" (click)="closeModal()">Cancel</ion-button> -->
   </ion-row>
   
-
-  <a style="color:white;">Don't have an account? <a style="color:white" href="/signup"><b>Sign Up.</b></a></a>
+  <br>
+  <div style="text-align: center;">
+    <button style="background-color: transparent; color: #216353; font-size: 15px;" (click)="closeModal()">Back</button>
+  </div>
 
   
 </ion-content>

@@ -1,0 +1,40 @@
+.rateTitle{
+    --background: ;
+    color: #75DAAD;
+    font-size: 40px;
+}
+
+.rateInput{
+    --background: ;
+    color: #75DAAD;
+    font-size: 25px;
+    // height: 1000px;
+}
+
+.divArea{ 
+    height: 80%;
+}
+
+.submitBtn{
+    position: relative;
+    height: 50px;
+
+}
+
+.outlineBtn {
+    border: 0px solid #75DAAD;
+    box-sizing: border-box;
+    border-radius: 14px;
+    color: #ffffff;
+    --background: #75DAAD;
+    font-size: 20px;
+    width: 70%;
+    height: 35px;
+}
+
+
+.centerAlg{
+    margin-left: 55px;
+    margin-right: 55px;
+    margin-top: 60%;
+}

@@ -1,0 +1,31 @@
+<ion-toolbar mode="md" class="bgLight">
+
+  <img class="hpIcon" src="assets/putikLogo.png" routerLink="/admin-home"/>
+ 
+  <!-- <button class="darkFont logoutText" (click)="logout()">LOG OUT</button> -->
+  <ion-button style="float: right;" class="logoutBtn" shape="round" mode="ios" class="logoutBtn" (click)="logout()">
+    Log Out
+  </ion-button>
+  <button class="darkFont headerText"></button>
+  <button class="darkFont headerText" routerLink="/homepage">BACK TO PUTIK</button>
+  <button class="darkFont headerText" routerLink="/admin-add-comp">ADD NEW COMPANY</button>
+  <button class="darkFont headerText" routerLink="/admin-home">HOMEPAGE </button>
+  
+  
+</ion-toolbar>
+
+<ion-content class="bgLight">
+
+    <h1 class="title"> Waste Collection Companies</h1>
+  
+  
+  <ion-card class="lightCard" *ngFor="let item of items | async" routerLink="/admin-comp-profile/{{item.id}}">
+  
+    <ion-card-header>
+      
+      <ion-card-title class="cardTitle">{{item.displayName}}</ion-card-title>
+    </ion-card-header>
+  
+  </ion-card>
+
+</ion-content>

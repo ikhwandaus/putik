@@ -1,0 +1,45 @@
+<ion-content class="bg">
+
+<!-- <ion-header> -->
+  <ion-toolbar mode="md" class="bg">
+
+    <ion-buttons slot="start">
+      <ion-back-button class="backbtn" defaultHref="homepage"></ion-back-button>
+    </ion-buttons><br>
+
+  </ion-toolbar>
+<!-- </ion-header> -->
+
+
+
+  <ion-card class="darkFont card">
+
+    <div>
+      
+    </div>
+
+    <div>
+
+      <ion-item class="rateTitle">
+        <!-- <ion-label position="floating">Title</ion-label> -->
+        <ion-input placeholder="Title" type="text" [(ngModel)]="title"></ion-input>
+      </ion-item>
+
+    </div>
+
+    <div>
+      <ion-item lines="none" class="rateInput">
+        <!-- <ion-label position="floating">Review</ion-label> -->
+        <ion-textarea placeholder="Reviews" rows="10" cols="20" class="divArea" [(ngModel)]="review"></ion-textarea>
+      </ion-item>
+    </div>
+
+    <ion-button class="outlineBtn centerAlg" (click)="createReview()">Submit</ion-button>
+
+    <br>
+    <!-- <p class="darkFont"  ></p> -->
+
+    
+  </ion-card>
+
+</ion-content>

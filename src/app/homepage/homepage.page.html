@@ -1,83 +1,58 @@
 
 <ion-content class="bgLight">
 
-  
-
-
-    <ion-toolbar class="bgLight height100">
-
-      <ion-title class="darkGreenTxt"></ion-title>
-
-      <ion-button slot="end" shape="round" class="loginBtn darkGreenTxt"  (click)="presentModal()">
-        login
-      </ion-button>
-
+    <ion-toolbar class="bgLight height100"> 
+      
+     
+            <p class="darkGreenTxt userFont">{{username}}</p>
+            <button class="profBtn" slot="end"  routerLink="/userprof" >
+             <ion-icon class="icons" name="person-circle-sharp"></ion-icon>
+            </button>
+         
 
     </ion-toolbar>
   
-  <!-- <div id="darkGreen" href="/companies">
-
-    <img src="D:\Ddrive\xampp\htdocs\putik\src\assets\calendar.png" alt=""> 
-    <p class="btnText">Waste Collection Companies</p>
-
-  </div>
-  
-  <div id="lightGreen">
-    
-   <ion-label class="btnText2">Dumpsite & Recycle Drop-Offs</ion-label> 
-    <p class="btnText2">Dumpsite & Recycle Drop-Offs</p>
-
-  </div>
-  
-  <div id="darkGreen">
-     <img class="hpIcon" src="assets/calendar.png" alt="">
-    <p class="btnText">Waste Collection Schedules</p>
     
 
-  </div>
+    <div >
+      <ion-card lines="none" class="margin10" color="#216353" id="darkGreen" routerLink="/companies">
+        <img class="hpIcon" src="assets/putikLogo.png"/>
+        <p class="btnText fontWhite" style="margin-right: 10px;">Waste Collection Companies</p>
+      </ion-card>
   
-  <div id="lightGreen">
+      <ion-card lines="none" class="margin10" color="#75DAAD" id="lightGreen" routerLink="/map">
+        <img class="hpIcon2" src="assets/ping.png"/>
+        <p class="btnText2 fontWhite">Dumpsite & Recycle Drop-Offs</p>
+        
+      </ion-card>
 
-    <p class="btnText2">Live Chat Support</p>
+      <ion-card *ngIf="isAdmin" class="margin10" lines="none" color="#216353" id="adminBtn" routerLink="/admin-home">
+        <p class="btnText3 fontWhite">Administrator Mode</p>
+      </ion-card>
 
-  </div> -->
-  
-  <!-- <ion-list> -->
-    <ion-item lines="none" color="#216353" id="darkGreen" href="/companies">
-      <p class="btnText">Waste Collection Companies</p>
-    </ion-item>
+    </div>
 
-    <ion-item lines="none" color="#75DAAD" id="lightGreen" href="/locations">
-      <p class="btnText2">Dumpsite & Recycle Drop-Offs</p>
-    </ion-item>
-
-    <!-- <ion-item color="#216353" id="darkGreen" href="/schedule">
-     
-     
-      <p class="btnText">Waste Collection Schedules </p>
-
-     
-      <ion-thumbnail class="tn" slot="end">
-        <img class="hpIcon" src="assets/calendar.png"/>
-      </ion-thumbnail>
-      
-      
-    </ion-item> -->
-
-    <!-- <ion-item color="#75DAAD" id="lightGreen">
-      <p class="btnText2">Live Chat Support System</p>
-    </ion-item> -->
-  <!-- </ion-list>   -->
-
-  <button ion-button class="settings" routerLink="/settings">
-    <ion-icon name="settings" class="icons"></ion-icon>
-  </button>
-
+  <ion-button *ngIf="loggedIn" shape="round" mode="ios" class="logoutBtn" (click)="logOut()">
+    Log Out
+  </ion-button>
+  <ion-button *ngIf="!loggedIn" shape="round" mode="ios" class="logInBtn" (click)="logIn()">
+    Log In
+  </ion-button>
  
-
+  
 
 </ion-content>
+<div style="background-color: #216353;" *ngIf="!hasVerifiedEmail">
+  <p class="margin60">Please check your email and verify your account</p>
 
+  <ion-button shape="round" mode="ios" class="logoutBtn" (click)="sendVerificationEmail()" class="marginBtn">
+   Send Verification Email
+  </ion-button>
+
+  <ion-button shape="round" mode="ios" class="logoutBtn" (click)="refreshPage()" class="marginBtn">
+    Refresh
+   </ion-button>
+</div>
 
 
 

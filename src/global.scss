@@ -138,14 +138,19 @@
     background-color: #EDFFEA;
     padding: 20px;
     width: 100%;
-    height: 100%;
+    height: auto;
     border-radius: 60px;
     margin-right: auto;
     margin-left: auto;
+    position: relative;
 }
 
 .inline {
     display: inline-block;
+}
+
+.fontWhite{
+    color: white;
 }
 
 

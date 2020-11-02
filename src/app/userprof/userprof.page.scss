@@ -8,6 +8,20 @@
     height: 35px;
 }
 
+.logoutBtn {
+    // border: 1px solid #FF7171;
+    // box-sizing: border-box;
+    border-radius: 14px;
+    color: #ffffff;
+    --background:#FF7171 ;
+    width: 70%;
+    height: 35px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
 .blueBtn {
     border: 1px solid #179BD7;
     box-sizing: border-box;
@@ -22,6 +36,26 @@
     background-color: #FF7171; 
     color: black; 
     border-radius: 27px;
-    width: 103px;
-    height: 99px;
+    width: 150px;
+    height: 200px;
+}
+
+.backBtn{
+    --background: ;
+    --box-shadow: none;
+}
+
+.contentFont{
+    font-size: 20px;
+    text-align: center;
+}
+
+.cancelSubBtn{
+    border: 1px solid #FF7171;
+    box-sizing: border-box; 
+    border-radius: 14px; 
+    color: #FF7171;
+    --background: ;
+    width: 70%;
+    height: 35px;
 }
